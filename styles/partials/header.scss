@@ -1,0 +1,30 @@
+header {
+  background-color: white;
+  box-shadow: 0 0 15px 0 gray;
+  padding: 20px;
+
+  .extended-forecast-link {
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+  .header-text-main {
+    font-weight: 300;
+    letter-spacing: 0.20px;
+    padding: 20px 20px 10px 20px;
+    color: #484848;
+    font-size: 34px;
+    }
+
+  .header-text-location {
+    color: #7B5ECF;
+  }
+
+  .header-text-temp {
+    color: #3D7DD2;
+  }
+
+  .header-text-weather-type {
+    color: #FC595C;
+  }
+
+}

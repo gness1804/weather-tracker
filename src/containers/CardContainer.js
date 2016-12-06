@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { receiveLocation, promptUser } from '../actions/index'
-import Header from '../components/Header'
+import Card from '../components/Card'
 
 const mapStateToProps = (state) => ({
   state,
 })
 
-export default connect(mapStateToProps)(Header)
+export default connect(mapStateToProps)(Card)

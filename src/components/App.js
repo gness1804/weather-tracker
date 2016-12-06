@@ -2,27 +2,32 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import axios from 'axios'
 import HeaderContainer from '../containers/HeaderContainer'
-import { fetchForecast, updateLocation } from '../actions/index'
+import CardContainer from '../containers/CardContainer'
+import DashboardContainer from '../containers/DashboardContainer'
+import { fetchForecast, fetchCurrentLocationForecast } from '../actions/index'
 
 class App extends Component {
   componentDidMount() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
-        this.props.updateLocation(position)
         this.props.fetchForecast(position)
+        this.props.fetchCurrentLocationForecast(position)
       })
     }
   }
 
   render() {
     return (
-      <HeaderContainer />
+      <div className="master-container">
+        <HeaderContainer />
+        {this.props.children}
+      </div>
     )
   }
 }
 
 App.propTypes = {
-  updateLocation: React.PropTypes.func.isRequired,
+  fetchCurrentLocationForecast: React.PropTypes.func.isRequired,
   fetchForecast: React.PropTypes.func.isRequired,
 }
 

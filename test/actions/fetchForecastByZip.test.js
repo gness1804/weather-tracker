@@ -6,7 +6,7 @@ import * as actions from '../../src/actions'
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 
-describe('fetchForecast action', () => {
+describe('fetchForecastByZip action', () => {
   xit('placeholder test - figure out api call', () => {
     expect(true).toEqual(true)
   })
